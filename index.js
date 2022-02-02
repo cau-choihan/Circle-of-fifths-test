@@ -14,7 +14,6 @@ let helloName;
 
 function setName(){
 helloName = document.getElementById("name").value
-console.log(helloName);
 document.getElementById("helloYou").innerHTML = helloName+"님 환영합니다."
 document.getElementById("introduce").innerHTML =
 "<p>시작을 누르면 5도권이 10문제 랜덤 생성됩니다.</p>"
@@ -32,28 +31,24 @@ function modeCounter(){
         for(let i=0;i<12;i++){
             interval[i]=intervalSharp[i];
         }
-        console.log(interval);
     }
     else if(modeCount%4===2){
         document.getElementById("modeNow").innerHTML="b 한글"
         for(let i=0;i<12;i++){
             interval[i]=intervalFlatKor[i];
         }
-        console.log(interval);
     }
     else if(modeCount%4===3){
         document.getElementById("modeNow").innerHTML="# 한글"
         for(let i=0;i<12;i++){
             interval[i]=intervalSharpKor[i];
         }
-        console.log(interval);
     }
     else if(modeCount%4===0){
         document.getElementById("modeNow").innerHTML="b flat"
         for(let i=0;i<12;i++){
             interval[i]=intervalFlat[i];
         }
-        console.log(interval);
     }
 }
 function makeQuestion1Answer(i){
@@ -183,16 +178,12 @@ function trueOrFalse1(value){
     AnswerCount++;
     solutionNum++;
     makeQuestion1();
-    console.log(AnswerCount);
-    console.log(solutionNum);
     document.getElementById("result").innerHTML = AnswerCount+"개 맞으셨습니다."
 
     }
     else{
         solutionNum++;
         makeQuestion1();
-        console.log(AnswerCount);
-        console.log(solutionNum);
         document.getElementById("result").innerHTML = AnswerCount+"개 맞으셨습니다."
 
     }
